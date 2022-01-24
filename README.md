@@ -1,6 +1,7 @@
 # Turborepo starter
 
-This is an official Yarn v1 starter turborepo.
+This is a Turborepo starter with 2 separate deployments to Heroku.
+https://blog.softup.co/how-to-deploy-a-monorepo-to-multiple-heroku-apps-using-github-actions/
 
 ## What's inside?
 
