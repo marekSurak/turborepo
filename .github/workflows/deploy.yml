@@ -18,7 +18,7 @@ jobs:
           heroku_app_name: "turbo-doc" #Must be unique in Heroku
           heroku_email: "marek.surak@strv.com"
         env:
-          HD_APP_BASE: "apps/doc"
+          HD_APP_BASE: "apps/docs"
       - name: Deploy Web to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
