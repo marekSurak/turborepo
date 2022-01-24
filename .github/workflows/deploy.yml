@@ -11,19 +11,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Deploy Web to Heroku
+      - name: Deploy Portal FE
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "turbo-web" #Must be unique in Heroku
+          heroku_app_name: "turbo-portal-fe" #Must be unique in Heroku
           heroku_email: "marek.surak@strv.com"
         env:
-          HD_APP_BASE: "apps/web"
-      - name: Deploy Doc to Heroku
+          HD_APP_BASE: "apps/portal-fe"
+      - name: Deploy Portal SAS
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "turbo-doc" #Must be unique in Heroku
+          heroku_app_name: "turbo-portal-sas" #Must be unique in Heroku
           heroku_email: "marek.surak@strv.com"
         env:
-          HD_APP_BASE: "apps/docs"
+          HD_APP_BASE: "apps/portal-sas"
