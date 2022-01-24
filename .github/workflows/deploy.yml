@@ -15,7 +15,7 @@ jobs:
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "turbo-portal-fe" #Must be unique in Heroku
+          heroku_app_name: "turborepo-portal-fe" #Must be unique in Heroku
           heroku_email: "marek.surak@strv.com"
         env:
           HD_APP_BASE: "apps/portal-fe"
@@ -23,7 +23,7 @@ jobs:
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "turbo-portal-sas" #Must be unique in Heroku
+          heroku_app_name: "turborepo-portal-sas" #Must be unique in Heroku
           heroku_email: "marek.surak@strv.com"
         env:
           HD_APP_BASE: "apps/portal-sas"
