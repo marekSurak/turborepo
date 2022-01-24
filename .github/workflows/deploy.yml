@@ -11,14 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Deploy Doc to Heroku
-        uses: akhileshns/heroku-deploy@v3.12.12
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "turbo-doc" #Must be unique in Heroku
-          heroku_email: "marek.surak@strv.com"
-        env:
-          HD_APP_BASE: "apps/docs"
       - name: Deploy Web to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
@@ -27,3 +19,11 @@ jobs:
           heroku_email: "marek.surak@strv.com"
         env:
           HD_APP_BASE: "apps/web"
+      - name: Deploy Doc to Heroku
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "turbo-doc" #Must be unique in Heroku
+          heroku_email: "marek.surak@strv.com"
+        env:
+          HD_APP_BASE: "apps/docs"
